@@ -66,6 +66,8 @@ func main() {
 			continue
 		}
 
+		fmt.Println("New connection accepted from", conn.RemoteAddr())
+
 		for line := range getLinesChannel(conn) {
 			fmt.Printf("read: %s\n", line)
 		}
